@@ -1,21 +1,21 @@
 import TodoService from "./todo-service.js";
 
-const _todoService = new TodoService()
+const _ts = new TodoService()
 
 function _drawTodos() {
 	//WHAT IS MY PURPOSE?
 }
 
 function _drawError() {
-	console.error('[TODO ERROR]', _todoService.TodoError)
-	//document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`
+	console.error('[TODO ERROR]', _ts.TodoError)
+	//document.querySelector('#todo-error').textContent = `${_ts.TodoError.message}`
 }
 
 
 export default class TodoController {
 	constructor() {
-		_todoService.addSubscriber('error', _drawError)
-		_todoService.getTodos()
+		_ts.addSubscriber('error', _drawError)
+		_ts.getTodos()
 		// Don't forget to add your subscriber
 	}
 
@@ -26,17 +26,17 @@ export default class TodoController {
 			// DONT FORGET TO BUILD YOUR TODO OBJECT
 		}
 
-		_todoService.addTodo(todo)
+		_ts.addTodo(todo)
 	}
 
 	toggleTodoStatus(todoId) {
 		// asks the service to edit the todo status
-		_todoService.toggleTodoStatus(todoId)
+		_ts.toggleTodoStatus(todoId)
 	}
 
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
-		_todoService.removeTodo(todoId)
+		_ts.removeTodo(todoId)
 	}
 
 
