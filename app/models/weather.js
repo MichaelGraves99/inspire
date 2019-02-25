@@ -21,7 +21,7 @@ export default class Weather {
         <h4 class="card-title cen">Weather</h4>
         <h4 class="card-title cen">${this.city}</h4>
         <h4 class="card-title cen" data-toggle="tooltip" data-placement="bottom" title="${this.celsius} C">${this.farenheit}<span> F</span></h4>
-        <img class="text-center" src="https://openweathermap.org/img/w/${this.icon}.png" alt="">
+        <div class="text-center"><img src="https://openweathermap.org/img/w/${this.icon}.png" alt=""></div>
       </div>
     </div>
    `
