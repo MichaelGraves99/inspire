@@ -5,7 +5,7 @@ export default class Image {
 
   }
   get ImageTemplate() {
-    return `<img class="bk-grnd-img" src="${this.url}" alt="BackGround image here">`
+    return `<img class="bk-grnd-img" src="${this.large_url}" alt="BackGround image here">`
 
   }
 }

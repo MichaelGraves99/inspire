@@ -5,17 +5,18 @@ const _is = new ImageService()
 function drawImage() {
   let image = _is.Image
   console.log("THE IMAGE MAN SAYS:", _is.Image)
-  document.getElementById('bg-image').innerHTML = image.ImageTemplate
+  document.querySelector('#bg-image').setAttribute('style', `background-image:url(${image});`)
 }
 
+//Public
 export default class ImageController {
   constructor() {
     _is.addSubscriber('image', drawImage)
-    _is.getImage()
+    _is.getImageApi()
   }
 
   getImage() {
-    _is.getImage()
+    _is.getImageApi()
   }
 
 }

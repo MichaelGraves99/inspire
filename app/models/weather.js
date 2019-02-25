@@ -8,5 +8,29 @@ export default class Weather {
     // You should probably convert the temperature data to either F or C
     this.city = data.name
     this.kelvin = data.main.temp
+    this.weather = data.weather[0].main
+    this.icon = data.weather[0].icon
+    this.celsius = Math.floor(data.main.temp - 273.15)
+    this.farenheit = Math.floor(((data.main.temp - 273.15) * (9 / 5)) + 32)
   }
+
+  get WeatherTemplate() {
+    return `
+    <div class="card" style="width: 10rem;">
+      <div class="card-body">
+        <h4 class="card-title cen">Weather</h4>
+        <h4 class="card-title cen">${this.city}</h4>
+        <h4 class="card-title cen" data-toggle="tooltip" data-placement="bottom" title="${this.celsius} C">${this.farenheit}<span> F</span></h4>
+        <img class="text-center" src="https://openweathermap.org/img/w/${this.icon}.png" alt="">
+      </div>
+    </div>
+   `
+  }
+
 }
+
+
+
+
+{/* <h4 class="card-subtitle cen mb-2">${this.farenheit}<span>F</span></h4>
+<h4 class="card-subtitle cen mb-2">${this.celsius}<span>C</span></h4> */}

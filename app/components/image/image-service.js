@@ -1,11 +1,11 @@
 import Image from "../../models/image.js";
 // @ts-ignore
-const imgApi = axios.create({
+const _imgApi = axios.create({
 	baseURL: '//bcw-sandbox.herokuapp.com/api/images',
 	timeout: 3000
 });
 let _state = {
-	image: {}
+	image: ''
 }
 
 let _subscribers = {
@@ -28,11 +28,11 @@ export default class ImageService {
 		_subscribers[prop].push(fn)
 	}
 
-	getImage() {
+	getImageApi() {
 		console.log('Calling the Imageman')
-		imgApi.get()
+		_imgApi.get()
 			.then(res => {
-				_setState('image', new Image(res.data))
+				_setState('image', res.data.large_url)
 			})
 			.catch(err => {
 				console.error(err)
