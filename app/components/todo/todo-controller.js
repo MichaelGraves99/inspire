@@ -51,7 +51,7 @@ export default class TodoController {
 		e.preventDefault()
 		let form = e.target
 		let todo = {
-			description: form.value
+			description: form.description.value
 		}
 		_ts.addTodo(todo)
 		form.reset()
