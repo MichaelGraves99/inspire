@@ -8,18 +8,11 @@ export default class Todo {
 
   get TodoItem() {
     return `
-    <div class="bg-transparent">
-      <h5 class="todo-item">${this.description}   <i class="fas fa-trash-alt" onclick="app.controllers.todoController.removeTodo(${this._id})"></i></h5>
+    <div class="card" style="width: 18rem;">
+      <li class="todo-item"><span>${this.description}   </span><span class="m-1" onclick="app.controllers.todoController.removeTodo('${this._id}')"><i class="fas fa-trash-alt"></i></span></li>
     </div >
       `
   }
 
 }
 
-// get TodoItem() {
-//   return `
-//     <div class="bg-transparent">
-//       <h5 class="todo-item">${this.description}   <i class="fas fa-trash-alt"></i></h5>
-//     </div >
-//       `
-// }

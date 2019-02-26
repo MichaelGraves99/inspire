@@ -4,6 +4,10 @@
 .fb{
     font-family: 'Patua One', cursive;
 }
+.first-item{
+  display:flex;
+  justify-content: flex-end
+}
 
 #todo-error{
   color: red;
@@ -22,9 +26,10 @@ body {
 
 .card-body{
   color: white;
-  outline-color:
+  
 }
 
 .card{
-  background-color: rgba(128, 128, 128, 0.164)
+  background-color: rgba(128, 128, 128, 0.164);
+  color: rgb(245, 247, 239)
 }

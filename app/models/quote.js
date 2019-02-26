@@ -9,7 +9,7 @@ export default class Quote {
 
   get QuoteTemplate() {
     return `
-    <div class="card" style="width: 24rem;">
+    <div class="card" style="width: 36rem;">
       <div class="card-body">
         <h5 data-toggle="tooltip" data-placement="bottom" title="${this.author}">${this.body}</h5>
       </div>

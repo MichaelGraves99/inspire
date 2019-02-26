@@ -15,10 +15,11 @@ function _drawTodos() {
 	let template = ''
 	let toDoList = _ts.Todos
 	template += `
-		<div class="text-light txt-shadow bg-dk-transparent d-inline-block rounded shadow p-2">
+		<div class="card" style="width: 18rem;">
 				<h3>Tasks</h3>
 				<p>You have ${_ts.Todos.length} tasks</p>
 				<ul class="pl-0 overflow-auto">
+		</div>		
 		`
 	toDoList.forEach(td => {
 		template += td.TodoItem
