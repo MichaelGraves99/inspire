@@ -4,7 +4,6 @@ const _is = new ImageService()
 
 function drawImage() {
   let image = _is.Image
-  console.log("THE IMAGE MAN SAYS:", image)
   document.querySelector('#bg-image').setAttribute('style', `background-image:url(${image});`)
 }
 

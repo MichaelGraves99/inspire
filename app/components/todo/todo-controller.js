@@ -64,6 +64,7 @@ export default class TodoController {
 
 	removeTodo(todoId) {
 		// ask the service to run the remove todo with this id
+		console.log('remove from controller')
 		_ts.removeTodo(todoId)
 	}
 

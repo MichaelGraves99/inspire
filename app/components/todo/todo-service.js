@@ -1,7 +1,7 @@
 import Todo from "../../models/todo.js";
 // @ts-ignore
 const _todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/Lukea/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/MSG/todos/',
 	timeout: 3000
 });
 
@@ -63,6 +63,7 @@ export default class TodoService {
 	}
 
 	removeTodo(todoId) {
+		console.log(todoId)
 		_todoApi.delete(todoId)
 			.then(res => {
 				this.getTodos()
