@@ -1,3 +1,5 @@
+
+
 .fa{
     font-family: 'Permanent Marker', cursive;
 }
@@ -7,6 +9,15 @@
 .first-item{
   display:flex;
   justify-content: flex-end
+}
+.second-item{
+  display:flex;
+  justify-content: center
+}
+.last-item{
+  display:flex;
+  justify-content: center;
+  align-items: flex-end  
 }
 
 #todo-error{

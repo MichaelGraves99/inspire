@@ -57,7 +57,7 @@ function startTime() {
   }
   let t = setTimeout(startTime, 3000);
   let data = `
-    <div class="card">
+    <div class="card" style="width: 60rem;">
       <div class="card-body fa cen">
         <h1 class="greeting">${greet}</h1>
       </div>
